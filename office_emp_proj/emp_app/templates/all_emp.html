@@ -13,6 +13,13 @@
   <body>
     <div class="container">
     <h1>All Employee Details</h1>
+    <form action="/filter_emp" method="post">
+      {% csrf_token %}
+        <input type="text" id="name" placeholder="Employee First/Last Name" name="name" value="{{name}}">
+        <input type="text" id="dept" placeholder="Department" name="dept" value="{{dept}}">
+        <input type="text" id="role" placeholder="Role" name="role" value="{{role}}">
+        <button type="submit" class="btn btn-primary">Filter</button>
+    </form>
     <hr>
     <table class="table">
         <thead>
